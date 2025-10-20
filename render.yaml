@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: spotify-login-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: SPOTIFY_CLIENT_ID
+        value: your-client-id
+      - key: SPOTIFY_CLIENT_SECRET
+        value: your-client-secret
+      - key: REDIRECT_URI
+        value: https://your-app.onrender.com/callback
